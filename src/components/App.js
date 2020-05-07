@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="name-list">
-        <h2>Add your tasks:</h2>
+        <h2>Add your tasks</h2>
         <Form />
       </div>
     );

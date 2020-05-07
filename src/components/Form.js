@@ -16,7 +16,7 @@ class Form extends React.Component {
     this.addItem = this.addItem.bind(this)
     this.deleteItem = this.deleteItem.bind(this)
   }
-  
+
 handleInput= (event) => {
     this.setState({
       currentItem: {
@@ -25,7 +25,7 @@ handleInput= (event) => {
       }
     });
   }
-    
+
   addItem = (event) => {
     event.preventDefault();
     const newItem = this.state.currentItem;
@@ -42,11 +42,11 @@ handleInput= (event) => {
   }
 
   deleteItem(key){
-    const filteredItems = this.state.items.filter(item => 
+    const filteredItems = this.state.items.filter(item =>
       item.key!==key);
     this.setState({
       items: filteredItems
-    })  
+    })
   }
 
   render(){
@@ -57,7 +57,7 @@ handleInput= (event) => {
             <input type="text" placeholder="Enter task" value= {this.state.currentItem.name} onChange={this.handleInput}></input>
             <button type="submit">Add</button>
           </form>
-            <ListItem items={this.state.items} 
+            <ListItem items={this.state.items}
             deleteItem={this.deleteItem}/>
         </header>
       </div>
